@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paidi Sai Shankar - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+	<style>
+      /* General Styling */
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      /* Navigation Bar */
+      nav {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+      }
+
+      nav #home {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav .profile_name {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      nav .contact_info {
+        font-size: 14px;
+        margin-top: 5px;
+      }
+
+      nav .contact_info img {
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      nav .topdiv {
+        display: flex;
+      }
+
+      nav .topmenu {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      nav .topmenu:hover {
+        text-decoration: underline;
+      }
+
+      /* About Me Section */
+      #about-me {
+        display: flex;
+        align-items: center;
+        padding: 40px;
+        background-color: #ecf0f1;
+      }
+
+      #about-me img {
+        border-radius: 50%;
+        margin-right: 40px;
+      }
+
+      #about-me h1 {
+        font-size: 36px;
+        color: #2980b9;
+      }
+
+      #about-me p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+/* Education Section */
+      #education {
+        padding: 40px;
+        background-color:  #ebebe0;
+      }
+
+      #education h1 {
+        font-size: 32px;
+        color:  #cc0052;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+	   #education h2 {
+        font-size: 32px;
+        color: #4d4dff;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+	  
+      /* Skills Section */
+      #skills {
+        background-color: #000000;
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      #skills h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .all_skills {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .skill {
+        width: 200px;
+        text-align: center;
+      }
+
+      .skill img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .skill h6 {
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .skill p {
+        font-size: 14px;
+      }
+
+      /* Projects Section */
+      #projects {
+        padding: 40px;
+        background-color: #e6e6ff;
+      }
+
+      #projects h2 {
+        font-size: 32px;
+        color: #cc0052;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .projects-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .project-card {
+        background-color: white;
+        border: 1px solid #bdc3c7;
+        padding: 20px;
+        border-radius: 8px;
+        width: 30%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-card h3 {
+        font-size: 24px;
+        color: #3498db;
+      }
+
+      .project-card ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .project-card li {
+        margin: 10px 0;
+        font-size: 16px;
+      }
+	  
+	  /* Certificates Section */
+      #Certificates {
+        background-color: #000000;
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      #Certificates h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      /* Recommendations Section */
+      #recommendations {
+        background-color: #34495e;
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      #recommendations h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+      }
+
+      .all_recommendations {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .recommendation {
+        width: 30%;
+        background-color: #2c3e50;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-style: italic;
+      }
+
+      .recommendation span {
+        font-size: 36px;
+      }
+
+      /* Contact Form Section */
+      #contact {
+        padding: 40px;
+        background-color: #f4f4f4;
+      }
+
+      #contact fieldset {
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        padding: 20px;
+        width: 60%;
+        margin: auto;
+      }
+
+      #contact legend {
+        font-size: 24px;
+        color: #2980b9;
+      }
+
+      #contact input, #contact textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #bdc3c7;
+        border-radius: 4px;
+      }
+
+      #recommend_btn {
+        background-color: #2980b9;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      #recommend_btn:hover {
+        background-color: #3498db;
+      }
+
+      /* Back to Top Icon */
+      .iconbutton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .iconbutton svg {
+        background-color: #3498db;
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .iconbutton svg:hover {
+        background-color: #2980b9;
+      }
+
+      /* Popup */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .popup img {
+        width: 40px;
+        margin-bottom: 10px;
+      }
+
+      .popup h3 {
+        font-size: 24px;
+        color: #2980b9;
+        margin-bottom: 20px;
+      }
+
+      .popup button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .popup button:hover {
+        background-color: #2980b9;
+      }
+    </style>
+	
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          PAIDI SAI SHANKAR
+          <div class="contact_info">
+            <img src="https://t4.ftcdn.net/jpg/04/76/40/09/240_F_476400933_A4gKwXtlgQFslfSuDvbV35eQcBIDlYjw.jpg", width="40px" alt="https://t4.ftcdn.net/jpg/04/76/40/09/240_F_476400933_A4gKwXtlgQFslfSuDvbV35eQcBIDlYjw.jpg"/>
+          saishankarpaidi@gmail.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="https://img.freepik.com/premium-psd/phone-icon-logo-with-3d-modern-style-png_679658-56537.jpg?size=626&ext=jpg", width="40px" alt="https://img.freepik.com/premium-psd/phone-icon-logo-with-3d-modern-style-png_679658-56537.jpg?size=626&ext=jpg"/>
+          +91 9398447217
+        </div>
+		<div class="contact_info">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png", width= "40px" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png"/>
+          https://in.linkedin.com/in/paidi-sai-shankar-142b55243
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+		  <a class="topmenu" href="#education">Education</a>
+		  <a class="topmenu" href="#skills">Skills</a>
+		  <a class="topmenu" href="#projects">Projects</a>
+		  <a class="topmenu" href="#Certificates">Certificates</a>
+          <br/>
+
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="C:\Users\saish\Pictures\my pass photo.jpg", width="300px" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Paidi Sai Shankar! <!--<img src="C:\Users\saish\Pictures\my pass photo.jpg" width="30px"/-->
+          </h1>
+          <p>
+            Iam a motivated fresher with a strong foundation in Java, Python, and web technologies including HTML, JavaScript, and CSS. 
+			Iam Eager to apply My technical skills in real-world projects, Iam passionate about building dynamic and user-friendly web applications. 
+			With a keen interest in continuous learning, Iam ready to contribute to innovative development teams and grow in the field of software engineering.
+          </p>
+      </div>
+    </section>
+	
+	<!-- Education -->
+     <section id="education">
+      <h1>EDUCATION</h1>
+      <div style="clear:both;"></div>
+      <div class="education-entry">
+      <h2>Bachelor of Technology</h2>
+	  <h3>Artificial Intelligence and Data Science</h3>
+      <p>Miracle Educational Society Group of Institutions Affilated of JNTUGv, Vizinagram, India</p>
+      <p>2021 - 2025</p>
+     </div>
+     <div class="education-entry">
+     <h2>Intermedaite</h2>
+	 <h3>MPC</h3>
+     <p>Sri Vihan Junior College, Visakhapatnam, India</p>
+     <p>2019 - 2021</p>
+     </div>
+	  <div class="education-entry">
+     <h2>High School</h2>
+	 <h3>10th Standrad</h3>
+     <p>Sri Chaitanya techno school, Visakhapatnam, India</p>
+     <p>2018 - 2019</p>
+     </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h1>SKILLS</h1>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="C:\Users\saish\Pictures\java.png"/>
+          <h6>Java</h6>
+        </div>  
+
+        <div class="skill">
+          <img src="C:\Users\saish\Pictures\python.png"/>
+          <h6>Basic Python</h6>
+        </div> 
+        
+        <div class="skill">
+            <img src="C:\Users\saish\Pictures\Html.png"/>
+            <h6>HTML</h6>
+          </div>
+
+          <div class="skill">
+            <img src="C:\Users\saish\Pictures\js.png"/>
+            <h6>JavaScript</h6>
+          </div>
+
+          <div class="skill">
+            <img src="C:\Users\saish\Pictures\css.png"/>
+            <h6>CSS</h6>
+          </div>
+		  
+          <div class="skill">
+            <img src="C:\Users\saish\Pictures\sql.png"/>
+            <h6>SQL</h6>
+          </div>	
+          
+          <div class="skill">
+            <img src="C:\Users\saish\Pictures\mongo.png"/>
+            <h6>MongoDB</h6>
+          </div>		  
+
+        </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>MY PROJECTS</h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>CRUD Appilications</h3>
+            <ul>
+              <li>Developed a CRUD (Create, Read, Update, Delete) application using HTML, CSS, JavaScript.</li>
+              <li>The application allows users to efficiently manage and interact with data stored in a MongoDB.</li>
+              <li>Analyzed problems and worked with teams to develop solutions. This application is designed to be
+              scalable and maintainable, with modular code and comprehensive error handling.</li>
+              <li>Tools Used: HTML,CSS, JavaScript.</li>
+              <li>Team Size: 6</li>
+              <li>My role: Team Lead.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Movie Recommendation System</h3>
+            <ul>
+              <li>In this project, I utilized a movies and ratings dataset to analyze and gain insights into viewer 
+               preferences, movie popularity, and rating trends.</li>
+			  <li>The primary focus was on understanding how different factors, such as genre, release year, and user 
+               demographics, influence movie ratings.</li>
+			  <li>Tools Used: Python, Python libraries, Movie dataset, Rating dataset</li>
+			  <li>Team Size: single</li>
+			  <li>My role: Self paced</li>
+
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Portfolio</h3>
+            <ul>
+              <li> I built a personal portfolio website to showcase my skills, projects, and achievements.</li> 
+			  <li>The site acts as my professional online presence, allowing others to easily learn about my background and expertise.</li>
+			  <li>Tools Used:HTML,CSS,JavaScript</li>
+            </ul>
+          </div>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+	
+	<!-- Certificates -->
+    <section id="Certificates">
+      <h1>CERTIFICATES</h1>
+      <div style="clear:both;"></div>
+
+      <div class="all_Certificates">
+        <div class="Certificates">
+          <img src="C:\Users\saish\Pictures\Corizo Excellence.jpg", width="400">
+          <h4>Web Development Certification in Corizo</h4>
+        </div>  
+
+        <div class="Certificates">
+          <img src="C:\Users\saish\Pictures\Acme Intern certificate.jpg", width = "400">
+          <h4>Artificial Intelligence using Python Certification in Acmegrade</h4>
+        </div> 
+        
+        <div class="Certificates">
+            <img src="C:\Users\saish\Pictures\edx.jpg", width="400">
+            <h4>Introduction to HTML5,CSS3 and JavaScript Certification in Edx</h4>
+          </div>
+
+          <div class="Certificates">
+            <img src="C:\Users\saish\Pictures\cognitive.jpg", width="400">
+            <h4>SQL and Relation Database Certification in Cognitive class.ai</h4>
+          </div>
+
+   <!-- Recommendation Form -->
+<section id="contact">
+  <div class="flex_center">
+    <fieldset>
+      <legend class="introduction">Leave a Recommendation</legend>
+      <input type="text" id="name" placeholder="Name (Optional)"> <br/>
+      <textarea id="new_recommendation" cols="50" rows="10" placeholder="Message"></textarea>
+      <div class="flex_center">
+        <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+      </div>
+    </fieldset>
+  </div>
+</section>
+
+<!-- Section to Display Recommendations -->
+<section id="recommendations">
+  <h2>RECOMMENDATIONS</h2>
+  <ul id="recommendation_list"></ul>
+</section>
+
+<div class="iconbutton">
+  <a href="#home">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+  </a>
+</div>
+
+<div class="popup" id="popup" class="flex_center">
+  <img src="html_finalprojimages/checkmark--outline.svg"/>
+  <h3>Recommendation Submitted!</h3>
+  <button onclick="showPopup(false)">Ok</button>
+</div>
+
+<script>
+// Array to hold recommendations
+let recommendations = [];
+
+// Function to add recommendation
+function addRecommendation() {
+  const name = document.getElementById('name').value || "Anonymous";
+  const message = document.getElementById('new_recommendation').value;
+  
+  if (message.trim() === "") {
+    alert("Please enter a message before submitting.");
+    return;
+  }
+  
+  // Add recommendation to the array
+  recommendations.push({ name: name, message: message });
+  
+  // Display the recommendations
+  displayRecommendations();
+  
+  // Clear the form fields
+  document.getElementById('name').value = "";
+  document.getElementById('new_recommendation').value = "";
+  
+  // Show the popup confirmation
+  showPopup(true);
+}
+
+// Function to show or hide the popup
+function showPopup(show) {
+  const popup = document.getElementById('popup');
+  if (show) {
+    popup.style.display = 'block';
+  } else {
+    popup.style.display = 'none';
+  }
+}
+
+// Function to display recommendations
+function displayRecommendations() {
+  const recommendationList = document.getElementById('recommendation_list');
+  recommendationList.innerHTML = ""; // Clear the current list
+  
+  recommendations.forEach(recommendation => {
+    const listItem = document.createElement('li');
+    listItem.textContent = `${recommendation.name}: ${recommendation.message}`;
+    recommendationList.appendChild(listItem);
+  });
+}
+
+// Initialize popup to be hidden on page load
+document.addEventListener("DOMContentLoaded", function() {
+  showPopup(false);
+});
+</script>
+</body>
+</html>
