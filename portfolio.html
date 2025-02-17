@@ -56,6 +56,27 @@
         text-decoration: underline;
       }
 
+      .clickable-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .clickable-link:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .linkedin-link {
+            color: #0077b5;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .linkedin-link:hover {
+            text-decoration: underline;
+        }
+
       /* About Me Section */
       #about-me {
         display: flex;
@@ -333,7 +354,7 @@
           PAIDI SAI SHANKAR
           <div class="contact_info">
             <img src="https://t4.ftcdn.net/jpg/04/76/40/09/240_F_476400933_A4gKwXtlgQFslfSuDvbV35eQcBIDlYjw.jpg", width="40px" alt="https://t4.ftcdn.net/jpg/04/76/40/09/240_F_476400933_A4gKwXtlgQFslfSuDvbV35eQcBIDlYjw.jpg"/>
-          saishankarpaidi@gmail.com
+            <a href="mailto:saishankarpaidi@gmail.com" class="clickable-link">saishankarpaidi@gmail.com</a>
         </div>
         <div style="clear:both;"></div>
         <div class="contact_info">
@@ -342,7 +363,7 @@
         </div>
 		<div class="contact_info">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png", width= "40px" alt="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1200px-LinkedIn_icon.svg.png"/>
-          https://in.linkedin.com/in/paidi-sai-shankar-142b55243
+          <a href="https://www.linkedin.com/in/paidi-sai-shankar-116a0832a" target="_blank" class="clickable-link">https://www.linkedin.com/in/paidi-sai-shankar-116a0832a</a>
         </div>
         </div>
         <div class="topdiv">
@@ -354,7 +375,7 @@
           <br/>
 
         </div>
-      </div>    
+      </div>   
     </nav>
 
     <!-- About Me -->
@@ -406,37 +427,37 @@
 
       <div class="all_skills">
         <div class="skill">
-          <img src="C:\Users\saish\Pictures\java.png"/>
+          <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg"/>
           <h6>Java</h6>
         </div>  
 
         <div class="skill">
-          <img src="C:\Users\saish\Pictures\python.png"/>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"/>
           <h6>Basic Python</h6>
         </div> 
         
         <div class="skill">
-            <img src="C:\Users\saish\Pictures\Html.png"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"/>
             <h6>HTML</h6>
           </div>
 
           <div class="skill">
-            <img src="C:\Users\saish\Pictures\js.png"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"/>
             <h6>JavaScript</h6>
           </div>
 
           <div class="skill">
-            <img src="C:\Users\saish\Pictures\css.png"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"/>
             <h6>CSS</h6>
           </div>
 		  
           <div class="skill">
-            <img src="C:\Users\saish\Pictures\sql.png"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"/>
             <h6>SQL</h6>
           </div>	
           
           <div class="skill">
-            <img src="C:\Users\saish\Pictures\mongo.png"/>
+            <img src="https://www.svgrepo.com/show/354090/mongodb.svg"/>
             <h6>MongoDB</h6>
           </div>		  
 
@@ -450,6 +471,18 @@
 
         <div id="projects-container" class="projects-container">
           <div class="project-card">
+            <h3> Real Time Essay Feedback Tool</h3>
+            <ul>
+              <li>  Developed a real-time essay feedback application during a hackathon organized by
+                Miracle Software Systems.</li>
+              <li>The application uses AI to provide feedback on grammar,coherence, tone, and structure, enabling users to enhance the quality of their essays.</li>
+              <li>Tools Used: HTML, CSS, JavaScript, Flask, GPT-4 </li>
+              <li>Team Size: 5 </li>
+              <li>My Role: Team Lead</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
             <h3>CRUD Appilications</h3>
             <ul>
               <li>Developed a CRUD (Create, Read, Update, Delete) application using HTML, CSS, JavaScript.</li>
@@ -459,6 +492,19 @@
               <li>Tools Used: HTML,CSS, JavaScript.</li>
               <li>Team Size: 6</li>
               <li>My role: Team Lead.</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>E-commerce Website</h3>
+            <ul>
+              <li> Developed an E-commerce application enabling users to browse, search, and purchase products
+                seamlessly.</li>
+              <li>The platform included essential features such as product categorization, a shopping
+                cart, and a secure checkout process.</li>
+              <li>Tools Used: HTML, CSS, JavaScript, MongoDB, Node.js</li>
+              <li>Team Size: 7</li>
+              <li>My Role: Team Lead</li>
             </ul>
           </div>
           <hr>
@@ -495,9 +541,19 @@
 
       <div class="all_Certificates">
         <div class="Certificates">
+          <img src="C:\Users\saish\Pictures\hackthon.jpg", width="400">
+          <h4>hackathon Certification in Miracle Softwre Systems</h4>
+        </div> 
+
+        <div class="Certificates">
           <img src="C:\Users\saish\Pictures\Corizo Excellence.jpg", width="400">
           <h4>Web Development Certification in Corizo</h4>
         </div>  
+
+        <div class="Certificates">
+            <img src="C:\Users\saish\Downloads\Excelr certificate.jpg", width="400">
+            <h4>Python full Stack Certification in Excelr</h4>
+        </div>
 
         <div class="Certificates">
           <img src="C:\Users\saish\Pictures\Acme Intern certificate.jpg", width = "400">
