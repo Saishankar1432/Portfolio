@@ -1,352 +1,204 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Paidi Sai Shankar - Portfolio</title>
-    <link rel="stylesheet" href="./style.css"/>
-	<style>
-      /* General Styling */
-      body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        color: #333;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paidi Sai Shankar - Portfolio</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
 
-      /* Navigation Bar */
-      nav {
-        background-color: #2c3e50;
-        color: white;
-        padding: 20px;
-      }
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+    }
 
-      nav #home {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+    nav {
+      background-color: #1e272e;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
 
-      nav .profile_name {
-        font-size: 24px;
-        font-weight: bold;
-      }
+    .profile_name {
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-      nav .contact_info {
-        font-size: 14px;
-        margin-top: 5px;
-      }
+    .contact_info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 5px 0;
+    }
 
-      nav .contact_info img {
-        vertical-align: middle;
-        margin-right: 10px;
-      }
+    .contact_info img {
+      width: 24px;
+      height: 24px;
+    }
 
-      nav .topdiv {
-        display: flex;
-      }
+    .topdiv {
+      display: flex;
+      gap: 20px;
+    }
 
-      nav .topmenu {
-        color: white;
-        margin-left: 15px;
-        text-decoration: none;
-        font-size: 18px;
-      }
+    .topmenu {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-      nav .topmenu:hover {
-        text-decoration: underline;
-      }
+    .topmenu:hover {
+      color: #00a8ff;
+    }
 
-      .clickable-link {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    section {
+      padding: 40px 20px;
+    }
 
-        .clickable-link:hover {
-            text-decoration: underline;
-            cursor: pointer;
-        }
+    #about-me {
+      background: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 30px;
+    }
 
-        .linkedin-link {
-            color: #0077b5;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    #about-me img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-        .linkedin-link:hover {
-            text-decoration: underline;
-        }
+    #about-me h1 {
+      font-size: 28px;
+      color: #2f3640;
+    }
 
-      /* About Me Section */
-      #about-me {
-        display: flex;
-        align-items: center;
-        padding: 40px;
-        background-color: #ecf0f1;
-      }
+    #about-me p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-      #about-me img {
-        border-radius: 50%;
-        margin-right: 40px;
-      }
+    #skills, #Certificates {
+      background: #1e272e;
+      color: white;
+      text-align: center;
+    }
 
-      #about-me h1 {
-        font-size: 36px;
-        color: #2980b9;
-      }
+    #skills h1, #Certificates h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
 
-      #about-me p {
-        font-size: 18px;
-        line-height: 1.6;
-      }
+    .all_skills, .all_Certificates {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-/* Education Section */
-      #education {
-        padding: 40px;
-        background-color:  #ebebe0;
-      }
+    .skill, .Certificates {
+      background: white;
+      color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-      #education h1 {
-        font-size: 32px;
-        color:  #cc0052;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-	   #education h2 {
-        font-size: 32px;
-        color: #4d4dff;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-	  
-      /* Skills Section */
-      #skills {
-        background-color: #000000;
-        color: white;
-        padding: 40px;
-        text-align: center;
-      }
+    .skill img, .Certificates img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
 
-      #skills h1 {
-        font-size: 32px;
-        margin-bottom: 30px;
-      }
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-      .all_skills {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
+    .project-card h3 {
+      color: #2980b9;
+    }
 
-      .skill {
-        width: 200px;
-        text-align: center;
-      }
+    .project-card ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
 
-      .skill img {
-        width: 80px;
-        height: 80px;
-      }
+    #recommendations {
+      background: #34495e;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-      .skill h6 {
-        margin-top: 10px;
-        font-size: 18px;
-        font-weight: bold;
-      }
+    #recommendation_list li {
+      background: #2c3e50;
+      padding: 15px;
+      margin: 10px auto;
+      width: 60%;
+      border-radius: 8px;
+      font-style: italic;
+    }
 
-      .skill p {
-        font-size: 14px;
-      }
+    #contact input, #contact textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
-      /* Projects Section */
-      #projects {
-        padding: 40px;
-        background-color: #e6e6ff;
-      }
+    #recommend_btn {
+      background-color: #2980b9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-      #projects h2 {
-        font-size: 32px;
-        color: #cc0052;
-        text-align: center;
-        margin-bottom: 30px;
-      }
+    #recommend_btn:hover {
+      background-color: #3498db;
+    }
 
-      .projects-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      z-index: 999;
+    }
 
-      .project-card {
-        background-color: white;
-        border: 1px solid #bdc3c7;
-        padding: 20px;
-        border-radius: 8px;
-        width: 30%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .project-card h3 {
-        font-size: 24px;
-        color: #3498db;
-      }
-
-      .project-card ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .project-card li {
-        margin: 10px 0;
-        font-size: 16px;
-      }
-	  
-	  /* Certificates Section */
-      #Certificates {
-        background-color: #000000;
-        color: white;
-        padding: 40px;
-        text-align: center;
-      }
-
-      #Certificates h1 {
-        font-size: 32px;
-        margin-bottom: 30px;
-      }
-
-      /* Recommendations Section */
-      #recommendations {
-        background-color: #34495e;
-        color: white;
-        padding: 40px;
-        text-align: center;
-      }
-
-      #recommendations h2 {
-        font-size: 32px;
-        margin-bottom: 30px;
-      }
-
-      .all_recommendations {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-      }
-
-      .recommendation {
-        width: 30%;
-        background-color: #2c3e50;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        font-style: italic;
-      }
-
-      .recommendation span {
-        font-size: 36px;
-      }
-
-      /* Contact Form Section */
-      #contact {
-        padding: 40px;
-        background-color: #f4f4f4;
-      }
-
-      #contact fieldset {
-        border: 2px solid #3498db;
-        border-radius: 8px;
-        padding: 20px;
-        width: 60%;
-        margin: auto;
-      }
-
-      #contact legend {
-        font-size: 24px;
-        color: #2980b9;
-      }
-
-      #contact input, #contact textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #bdc3c7;
-        border-radius: 4px;
-      }
-
-      #recommend_btn {
-        background-color: #2980b9;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      #recommend_btn:hover {
-        background-color: #3498db;
-      }
-
-      /* Back to Top Icon */
-      .iconbutton {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-      }
-
-      .iconbutton svg {
-        background-color: #3498db;
-        padding: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      .iconbutton svg:hover {
-        background-color: #2980b9;
-      }
-
-      /* Popup */
-      .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-      }
-
-      .popup img {
-        width: 40px;
-        margin-bottom: 10px;
-      }
-
-      .popup h3 {
-        font-size: 24px;
-        color: #2980b9;
-        margin-bottom: 20px;
-      }
-
-      .popup button {
-        background-color: #3498db;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-
-      .popup button:hover {
-        background-color: #2980b9;
-      }
-    </style>
-	
-    <script src="./script.js"></script>
-  </head>
-  <body>
+    .popup h3 {
+      color: #2980b9;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
     <!-- Navigation Bar -->
     <nav>
       <div id="home">
@@ -541,12 +393,12 @@
 
       <div class="all_Certificates">
         <div class="Certificates">
-          <img src="C:\Users\saish\Pictures\hackthon.jpg", width="400">
+          <img src="https://media.licdn.com/dms/image/v2/D4E22AQHkG303Y0KHGQ/feedshare-shrink_2048_1536/B4EZSCvYXeHMAs-/0/1737360249638?e=1742428800&v=beta&t=XCqfJ0PcrJacY2jNujcoVfO7JjHpSCZ8bF1pvPxPPzQ", width="400">
           <h4>hackathon Certification in Miracle Softwre Systems</h4>
         </div> 
 
         <div class="Certificates">
-          <img src="C:\Users\saish\Pictures\Corizo Excellence.jpg", width="400">
+          <img src="https://media.licdn.com/dms/image/v2/D4E22AQEQa_x7cReisw/feedshare-shrink_1280/feedshare-shrink_1280/0/1727192318387?e=1742428800&v=beta&t=VzP-rgLVYeMP3acmQWt00rtEMWdD7KEsXxJ6gtwleE8", width="400">
           <h4>Web Development Certification in Corizo</h4>
         </div>  
 
@@ -556,108 +408,81 @@
         </div>
 
         <div class="Certificates">
-          <img src="C:\Users\saish\Pictures\Acme Intern certificate.jpg", width = "400">
+          <img src="https://media.licdn.com/dms/image/v2/D4E22AQFcSKk5m7wlzg/feedshare-shrink_800/feedshare-shrink_800/0/1727190120684?e=1742428800&v=beta&t=SjL-v3_Y5Jwwz71nDhGSh9YW7oIQ5uGaSmM_GbmG2AU", width = "400">
           <h4>Artificial Intelligence using Python Certification in Acmegrade</h4>
         </div> 
         
         <div class="Certificates">
-            <img src="C:\Users\saish\Pictures\edx.jpg", width="400">
+            <img src="https://media.licdn.com/dms/image/v2/D4E22AQEEK5KzmhhGIw/feedshare-shrink_800/feedshare-shrink_800/0/1727190324197?e=1742428800&v=beta&t=DfA0pMWY4xExFh5PzuKjJEBuJlBpvbOFBX0GjGwDhiA", width="400">
             <h4>Introduction to HTML5,CSS3 and JavaScript Certification in Edx</h4>
           </div>
 
           <div class="Certificates">
-            <img src="C:\Users\saish\Pictures\cognitive.jpg", width="400">
+            <img src="https://media.licdn.com/dms/image/v2/D4E22AQGUPncIP5pnfg/feedshare-shrink_800/feedshare-shrink_800/0/1727189774274?e=1742428800&v=beta&t=SlLOoapc0EaoiQmGD0lhidZ7jFSLXfeHLVz1EiqeF-0", width="400">
             <h4>SQL and Relation Database Certification in Cognitive class.ai</h4>
           </div>
 
    <!-- Recommendation Form -->
 <section id="contact">
-  <div class="flex_center">
     <fieldset>
       <legend class="introduction">Leave a Recommendation</legend>
       <input type="text" id="name" placeholder="Name (Optional)"> <br/>
-      <textarea id="new_recommendation" cols="50" rows="10" placeholder="Message"></textarea>
-      <div class="flex_center">
+      <textarea id="new_recommendation" cols="50" rows="5" placeholder="Message"></textarea>
+      <div style="text-align: center;">
         <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
       </div>
     </fieldset>
+  </section>
+
+  <!-- Section to Display Recommendations -->
+  <section id="recommendations">
+    <h2>RECOMMENDATIONS</h2>
+    <ul id="recommendation_list"></ul>
+  </section>
+
+  <!-- Popup -->
+  <div class="popup" id="popup">
+    <h3>Recommendation Submitted!</h3>
+    <button onclick="showPopup(false)">Close</button>
   </div>
-</section>
 
-<!-- Section to Display Recommendations -->
-<section id="recommendations">
-  <h2>RECOMMENDATIONS</h2>
-  <ul id="recommendation_list"></ul>
-</section>
+  <script>
+    let recommendations = JSON.parse(localStorage.getItem("recommendations")) || [];
 
-<div class="iconbutton">
-  <a href="#home">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-  </a>
-</div>
+    function addRecommendation() {
+      const name = document.getElementById('name').value || "Anonymous";
+      const message = document.getElementById('new_recommendation').value.trim();
 
-<div class="popup" id="popup" class="flex_center">
-  <img src="html_finalprojimages/checkmark--outline.svg"/>
-  <h3>Recommendation Submitted!</h3>
-  <button onclick="showPopup(false)">Ok</button>
-</div>
+      if (!message) {
+        alert("Please enter a message before submitting.");
+        return;
+      }
 
-<script>
-// Array to hold recommendations
-let recommendations = [];
+      const newRec = { name, message };
+      recommendations.push(newRec);
+      localStorage.setItem("recommendations", JSON.stringify(recommendations));
+      displayRecommendations();
+      showPopup(true);
 
-// Function to add recommendation
-function addRecommendation() {
-  const name = document.getElementById('name').value || "Anonymous";
-  const message = document.getElementById('new_recommendation').value;
-  
-  if (message.trim() === "") {
-    alert("Please enter a message before submitting.");
-    return;
-  }
-  
-  // Add recommendation to the array
-  recommendations.push({ name: name, message: message });
-  
-  // Display the recommendations
-  displayRecommendations();
-  
-  // Clear the form fields
-  document.getElementById('name').value = "";
-  document.getElementById('new_recommendation').value = "";
-  
-  // Show the popup confirmation
-  showPopup(true);
-}
+      document.getElementById('name').value = "";
+      document.getElementById('new_recommendation').value = "";
+    }
 
-// Function to show or hide the popup
-function showPopup(show) {
-  const popup = document.getElementById('popup');
-  if (show) {
-    popup.style.display = 'block';
-  } else {
-    popup.style.display = 'none';
-  }
-}
+    function displayRecommendations() {
+      const list = document.getElementById('recommendation_list');
+      list.innerHTML = "";
+      recommendations.forEach(rec => {
+        const li = document.createElement('li');
+        li.textContent = `${rec.name}: ${rec.message}`;
+        list.appendChild(li);
+      });
+    }
 
-// Function to display recommendations
-function displayRecommendations() {
-  const recommendationList = document.getElementById('recommendation_list');
-  recommendationList.innerHTML = ""; // Clear the current list
-  
-  recommendations.forEach(recommendation => {
-    const listItem = document.createElement('li');
-    listItem.textContent = `${recommendation.name}: ${recommendation.message}`;
-    recommendationList.appendChild(listItem);
-  });
-}
+    function showPopup(show) {
+      document.getElementById('popup').style.display = show ? 'block' : 'none';
+    }
 
-// Initialize popup to be hidden on page load
-document.addEventListener("DOMContentLoaded", function() {
-  showPopup(false);
-});
-</script>
+    window.onload = displayRecommendations;
+  </script>
 </body>
 </html>
